@@ -27,10 +27,9 @@ spec:
         name: angular-k8s-deployment
     spec:
       ports:
-        - nodePort: 30170 
-          port: 80        
+        - port: 80        
           targetPort: 80  
           protocol: TCP   
       selector:           
         app: angular-k8s-deployment
-      type: NodePort     
+      type: LoadBalancer     
